@@ -1,3 +1,26 @@
+# ローカル環境構築
+
+Stripeにログインし、下記からテスト環境の公開可能キーとシークレットキーを取得
+https://dashboard.stripe.com/test/apikeys
+
+main.jsの1,2行目を以下のように修正
+```
+const stripe = Stripe("stripeのテスト環境の公開可能キー”);
+const backend = "http://localhost:4242";
+```
+プロジェクトルートで下記コマンド実行
+
+```
+export STRIPE_SECRET_KEY=stripeのテスト環境のシークレットキー
+bundle install
+bundle exec puma -C config/puma.rb
+```
+
+public/signup.htmlをブラウザで開き、下記アイパスでログイン
+test@example.com
+stripe3ds
+
+
 # Stripe 3Dセキュア Workshop
 
 3Dセキュアの仕様を理解し、StripeのPaymentElementを使って、3Dセキュアを扱う方法を学びます。
