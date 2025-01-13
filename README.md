@@ -1,6 +1,6 @@
 # ローカル環境構築
 
-Stripeにログインし、下記からテスト環境の公開可能キーとシークレットキーを取得
+Stripeにログインし、下記からテスト環境の公開可能キーとシークレットキーを取得  
 https://dashboard.stripe.com/test/apikeys
 
 main.jsの1,2行目を以下のように修正
@@ -16,9 +16,9 @@ bundle install
 bundle exec puma -C config/puma.rb
 ```
 
-public/signup.htmlをブラウザで開き、下記アイパスでログイン
-test@example.com
-stripe3ds
+public/signup.htmlをブラウザで開き、下記アイパスでログイン  
+test@example.com  
+stripe3ds  
 
 
 # Stripe 3Dセキュア Workshop
